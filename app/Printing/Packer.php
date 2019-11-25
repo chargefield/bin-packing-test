@@ -4,6 +4,8 @@ namespace App\Printing;
 
 use App\Order;
 use App\Sheet;
+use App\Product;
+use App\OrderItem;
 use Illuminate\Support\Collection;
 
 class Packer
@@ -51,9 +53,9 @@ class Packer
     protected function getItemsFor(Order $order): Collection
     {
         return $order->items
-            ->map(function ($item) {
+            ->map(function (OrderItem $item) {
                 return $item->products()
-                    ->map(function ($product) use ($item) {
+                    ->map(function (Product $product) use ($item) {
                         return new Item($product, $item);
                     })
                     ->toArray();
