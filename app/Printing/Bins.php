@@ -118,7 +118,11 @@ class Bins
     protected function findNode(Node $node, int $width, int $height): ?Node
     {
         if ($node->isTaken()) {
-            return $this->findNode($node->right(), $width, $height) ?: $this->findNode($node->down(), $width, $height);
+            if ($right_leaf_node = $this->findNode($node->right(), $width, $height)) {
+                return $right_leaf_node;
+            }
+
+            return $this->findNode($node->down(), $width, $height);
         } elseif ($width <= $node->width() && $height <= $node->height()) {
             return $node;
         }
