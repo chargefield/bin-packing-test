@@ -6,18 +6,18 @@ A test Laravel project for packing a random number of orders with products of di
 
 Create an algorithm to take incoming orders and populate printing sheets.
 
-- Sheets can be considered as a 10 unit by 15 unit grid
-- Products come in sizes [ 1x1, 2x2, 3x3, 4x4, 5x2, 2x5 ]
-- 1x1 -> means 1 grid unit by 1 grid unit
+-   Sheets can be considered as a 10 unit by 15 unit grid
+-   Products come in sizes [ 1x1, 2x2, 3x3, 4x4, 5x2, 2x5 ]
+-   1x1 -> means 1 grid unit by 1 grid unit
 
 ### Constraints
 
-- Must use Laravel and Eloquent to develop algorithm
-- Orders must have all of their items on the same print sheet
-- Orders can have any number of items with any number of quantity
-- Must be able to track placement of products on the sheets
-- Generate 50 sheets with test data
-- Bonus: Solutions that present the least amount of wasted space on sheets
+-   Must use Laravel and Eloquent to develop algorithm
+-   Orders must have all of their items on the same print sheet
+-   Orders can have any number of items with any number of quantity
+-   Must be able to track placement of products on the sheets
+-   Generate 50 sheets with test data
+-   Bonus: Solutions that present the least amount of wasted space on sheets
 
 ## Installation
 
@@ -53,7 +53,7 @@ DB_PASSWORD=secret
 ### Seed Database
 
 ```bash
-php artisan migrate --seed
+php artisan migrate:fresh --seed
 ```
 
 This will seed the database with 50 orders of random number of products.
