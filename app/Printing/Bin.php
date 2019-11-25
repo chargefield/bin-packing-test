@@ -23,7 +23,7 @@ class Bin
     }
 
     /**
-     * Get width
+     * Get width.
      *
      * @return int
      */
@@ -33,7 +33,7 @@ class Bin
     }
 
     /**
-     * Get height
+     * Get height.
      *
      * @return int
      */
@@ -43,7 +43,7 @@ class Bin
     }
 
     /**
-     * Get free space in this bin
+     * Get free space in this bin.
      *
      * @return \Illuminate\Support\Collection
      */
@@ -53,14 +53,14 @@ class Bin
     }
 
     /**
-     * Find free space in this bin
+     * Find free space in this bin.
      *
      * @param \App\Printing\Node $node
      * @return self
      */
     public function findFreeSpace(Node $node): self
     {
-        if (!$node->isTaken()) {
+        if (! $node->isTaken()) {
             $this->free_space->push([$node->x(), $node->y(), $node->width(), $node->height()]);
         }
 

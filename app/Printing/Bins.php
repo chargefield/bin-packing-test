@@ -14,7 +14,7 @@ class Bins
     }
 
     /**
-     * Add items to a new bin
+     * Add items to a new bin.
      *
      * @param int $width
      * @param int $height
@@ -33,7 +33,7 @@ class Bins
     }
 
     /**
-     * Setup all the bins
+     * Setup all the bins.
      *
      * @return \Illuminate\Support\Collection
      */
@@ -50,7 +50,7 @@ class Bins
     }
 
     /**
-     * Pack a bin with given items
+     * Pack a bin with given items.
      *
      * @param \App\Printing\Bin $bin
      * @param \Illuminate\Support\Collection $items
@@ -69,11 +69,11 @@ class Bins
             ->map(function (Item $item) use ($bin, $items, $callback) {
                 $node = $this->getNode($bin->node(), $item);
 
-                if (!is_null($node)) {
+                if (! is_null($node)) {
                     $item->setNode($this->createLeafNodes($node, $item->width(), $item->height()));
                 }
 
-                if (!is_null($callback)) {
+                if (! is_null($callback)) {
                     $callback($bin, $items, $item);
                 }
 
@@ -86,7 +86,7 @@ class Bins
     }
 
     /**
-     * Get node
+     * Get node.
      *
      * @param \App\Printing\Node $base
      * @param \App\Printing\Item $item
@@ -108,7 +108,7 @@ class Bins
     }
 
     /**
-     * Find node
+     * Find node.
      *
      * @param \App\Printing\Node $node
      * @param int $width
@@ -127,7 +127,7 @@ class Bins
     }
 
     /**
-     * Create a set of leaf nodes
+     * Create a set of leaf nodes.
      *
      * @param \App\Printing\Node $node
      * @param int $width

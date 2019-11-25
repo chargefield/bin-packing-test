@@ -17,7 +17,7 @@ class ProductsTableSeeder extends Seeder
     }
 
     /**
-     * Get products
+     * Get products.
      *
      * @return array
      */

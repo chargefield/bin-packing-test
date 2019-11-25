@@ -4,7 +4,6 @@ namespace App\Printing;
 
 use App\Order;
 use App\Sheet;
-use App\Printing\Item;
 use Illuminate\Support\Collection;
 
 class Packer
@@ -20,7 +19,7 @@ class Packer
     }
 
     /**
-     * Get bins
+     * Get bins.
      *
      * @return \App\Printing\Bins
      */
@@ -34,7 +33,7 @@ class Packer
     }
 
     /**
-     * Get items for given order
+     * Get items for given order.
      *
      * @param \App\Order $order
      * @return \Illuminate\Support\Collection

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class OrdersTableSeeder extends Seeder
 {
     protected $order_count = 50;
+
     /**
      * Run the database seeds.
      *
@@ -27,7 +28,7 @@ class OrdersTableSeeder extends Seeder
     }
 
     /**
-     * Get random products
+     * Get random products.
      *
      * @return array
      */

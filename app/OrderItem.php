@@ -22,7 +22,7 @@ class OrderItem extends Model
     }
 
     /**
-     * Order relationship
+     * Order relationship.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -32,7 +32,7 @@ class OrderItem extends Model
     }
 
     /**
-     * Product relationship
+     * Product relationship.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

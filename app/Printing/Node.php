@@ -30,7 +30,7 @@ class Node
     }
 
     /**
-     * Get x position
+     * Get x position.
      *
      * @return int
      */
@@ -40,7 +40,7 @@ class Node
     }
 
     /**
-     * Get y position
+     * Get y position.
      *
      * @return int
      */
@@ -50,7 +50,7 @@ class Node
     }
 
     /**
-     * Get width
+     * Get width.
      *
      * @return int
      */
@@ -60,7 +60,7 @@ class Node
     }
 
     /**
-     * Set width
+     * Set width.
      *
      * @param int $width
      * @return self
@@ -73,7 +73,7 @@ class Node
     }
 
     /**
-     * Get height
+     * Get height.
      *
      * @return int
      */
@@ -83,7 +83,7 @@ class Node
     }
 
     /**
-     * Set height
+     * Set height.
      *
      * @param int $height
      * @return self
@@ -96,7 +96,7 @@ class Node
     }
 
     /**
-     * Check if this item is taken
+     * Check if this item is taken.
      *
      * @return bool
      */
@@ -106,7 +106,7 @@ class Node
     }
 
     /**
-     * Set taken
+     * Set taken.
      *
      * @param bool $taken
      * @return self
@@ -119,7 +119,7 @@ class Node
     }
 
     /**
-     * Get right leaf node
+     * Get right leaf node.
      *
      * @return \App\Printing\Node|null
      */
@@ -129,7 +129,7 @@ class Node
     }
 
     /**
-     * Set right leaf node
+     * Set right leaf node.
      *
      * @param \App\Printing\Node|null $right
      * @return self
@@ -142,7 +142,7 @@ class Node
     }
 
     /**
-     * Get down leaf node
+     * Get down leaf node.
      *
      * @return \App\Printing\Node|null
      */
@@ -152,7 +152,7 @@ class Node
     }
 
     /**
-     * Set down leaf node
+     * Set down leaf node.
      *
      * @param \App\Printing\Node|null $down
      * @return self

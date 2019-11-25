@@ -9,7 +9,7 @@ trait HasNode
     protected $node;
 
     /**
-     * Get node
+     * Get node.
      *
      * @return \App\Printing\Node|null
      */
@@ -19,7 +19,7 @@ trait HasNode
     }
 
     /**
-     * Set node
+     * Set node.
      *
      * @param \App\Printing\Node|null $node
      * @return self

@@ -15,7 +15,7 @@ class Order extends Model
     protected $guarded = [];
 
     /**
-     * Scope order query
+     * Scope order query.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
      * @return void
@@ -26,7 +26,7 @@ class Order extends Model
     }
 
     /**
-     * OrderItem relationship
+     * OrderItem relationship.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */

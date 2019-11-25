@@ -14,7 +14,7 @@ class Product extends Model
     protected $guarded = [];
 
     /**
-     * Parse size
+     * Parse size.
      *
      * @return array
      */
@@ -24,7 +24,7 @@ class Product extends Model
     }
 
     /**
-     * Get the width of the product
+     * Get the width of the product.
      *
      * @return int
      */
@@ -34,7 +34,7 @@ class Product extends Model
     }
 
     /**
-     * Get the height of the product
+     * Get the height of the product.
      *
      * @return int
      */

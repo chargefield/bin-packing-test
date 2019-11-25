@@ -14,7 +14,7 @@ class Preview
     }
 
     /**
-     * Get view
+     * Get view.
      *
      * @return \Illuminate\View\View
      */

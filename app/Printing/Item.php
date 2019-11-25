@@ -27,7 +27,7 @@ class Item
     }
 
     /**
-     * Get width
+     * Get width.
      *
      * @return int
      */
@@ -37,7 +37,7 @@ class Item
     }
 
     /**
-     * Set width
+     * Set width.
      *
      * @param int $width
      * @return self
@@ -50,7 +50,7 @@ class Item
     }
 
     /**
-     * Get height
+     * Get height.
      *
      * @return int
      */
@@ -60,7 +60,7 @@ class Item
     }
 
     /**
-     * Set height
+     * Set height.
      *
      * @param int $height
      * @return self
@@ -73,7 +73,7 @@ class Item
     }
 
     /**
-     * Get product model
+     * Get product model.
      *
      * @return \App\Product
      */
@@ -83,7 +83,7 @@ class Item
     }
 
     /**
-     * Get order item model
+     * Get order item model.
      *
      * @return \App\OrderItem
      */
@@ -93,7 +93,7 @@ class Item
     }
 
     /**
-     * Rotate this item
+     * Rotate this item.
      *
      * @return self
      */
@@ -109,7 +109,7 @@ class Item
     }
 
     /**
-     * Check if this item is rotated
+     * Check if this item is rotated.
      *
      * @return bool
      */
@@ -119,7 +119,7 @@ class Item
     }
 
     /**
-     * Check if this item is not in a bin
+     * Check if this item is not in a bin.
      *
      * @return bool
      */
