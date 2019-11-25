@@ -19,6 +19,16 @@ class Packer
     }
 
     /**
+     * Create preview.
+     *
+     * @return \App\Printing\Preview
+     */
+    public function preview(): Preview
+    {
+        return new Preview($this->bins());
+    }
+
+    /**
      * Get bins.
      *
      * @return \App\Printing\Bins
