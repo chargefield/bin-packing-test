@@ -68,6 +68,10 @@ You can use `php artisan serve` or whatever local web server you have to serve l
 
 ![Screenshot](https://github.com/chargefield/bin-packing-test/blob/master/screenshot.png?raw=true)
 
+### Files
+
+All files used to perform the packing can be found in `app/Printing/` folder.
+
 ## Todos
 
 This isn't the perfect/only solution.
