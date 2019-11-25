@@ -13,6 +13,14 @@ class Bins
         $this->bins = new Collection();
     }
 
+    /**
+     * Add items to a new bin
+     *
+     * @param int $width
+     * @param int $height
+     * @param \Illuminate\Support\Collection $items
+     * @return self
+     */
     public function add(int $width, int $height, Collection $items): self
     {
         $this->bins->push([
@@ -24,7 +32,12 @@ class Bins
         return $this;
     }
 
-    public function create(): Collection
+    /**
+     * Setup all the bins
+     *
+     * @return \Illuminate\Support\Collection
+     */
+    public function setup(): Collection
     {
         return $this->bins->map(function (array $bin) {
             return [
@@ -36,6 +49,14 @@ class Bins
         });
     }
 
+    /**
+     * Pack a bin with given items
+     *
+     * @param \App\Printing\Bin $bin
+     * @param \Illuminate\Support\Collection $items
+     * @param callable|null $callback
+     * @return \Illuminate\Support\Collection
+     */
     public function pack(Bin $bin, Collection $items, ?callable $callback = null): Collection
     {
         $base = new Node(0, 0, $bin->width(), $bin->height());
@@ -64,6 +85,13 @@ class Bins
         return $items;
     }
 
+    /**
+     * Get node
+     *
+     * @param \App\Printing\Node $base
+     * @param \App\Printing\Item $item
+     * @return \App\Printing\Node|null
+     */
     protected function getNode(Node $base, Item $item): ?Node
     {
         $node = $this->findNode($base, $item->width(), $item->height());
@@ -79,6 +107,14 @@ class Bins
         return $node;
     }
 
+    /**
+     * Find node
+     *
+     * @param \App\Printing\Node $node
+     * @param int $width
+     * @param int $height
+     * @return \App\Printing\Node|null
+     */
     protected function findNode(Node $node, int $width, int $height): ?Node
     {
         if ($node->isTaken()) {
@@ -90,6 +126,14 @@ class Bins
         return null;
     }
 
+    /**
+     * Create a set of leaf nodes
+     *
+     * @param \App\Printing\Node $node
+     * @param int $width
+     * @param int $height
+     * @return \App\Printing\Node
+     */
     protected function createLeafNodes(Node $node, int $width, int $height): Node
     {
         $node->setTaken(true);

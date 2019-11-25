@@ -2,7 +2,7 @@
 
 namespace App\Printing;
 
-use Illuminate\Support\Collection;
+use Illuminate\View\View;
 
 class Preview
 {
@@ -13,10 +13,15 @@ class Preview
         $this->bins = $bins;
     }
 
-    public function view()
+    /**
+     * Get view
+     *
+     * @return \Illuminate\View\View
+     */
+    public function view(): View
     {
         return view('preview', [
-            'bins' => $this->bins->create(),
+            'bins' => $this->bins->setup(),
         ]);
     }
 }

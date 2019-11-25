@@ -14,6 +14,12 @@ class Order extends Model
      */
     protected $guarded = [];
 
+    /**
+     * Scope order query
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @return void
+     */
     public function scopeOrdered(Builder $query)
     {
         $query->oldest()->orderBy('id');

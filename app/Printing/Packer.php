@@ -10,6 +10,7 @@ use Illuminate\Support\Collection;
 class Packer
 {
     protected $orders;
+
     protected $bins;
 
     public function __construct(Collection $orders)
@@ -18,6 +19,11 @@ class Packer
         $this->bins = new Bins;
     }
 
+    /**
+     * Get bins
+     *
+     * @return \App\Printing\Bins
+     */
     public function bins(): Bins
     {
         $this->orders->each(function (Order $order) {
@@ -27,6 +33,12 @@ class Packer
         return $this->bins;
     }
 
+    /**
+     * Get items for given order
+     *
+     * @param \App\Order $order
+     * @return \Illuminate\Support\Collection
+     */
     protected function getItemsFor(Order $order): Collection
     {
         return $order->items
