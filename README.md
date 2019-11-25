@@ -72,5 +72,5 @@ This isn't the perfect/only solution.
 
 There are a bunch of improvements left to do:
 
--   multiple sheets for overflow
--   sheets with multiple orders if there is room
+-   multiple sheets for overflow items
+-   fill sheets with multiple orders if there is room
