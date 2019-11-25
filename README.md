@@ -64,6 +64,7 @@ _Note: You can change the number of orders created or the number of products cre
 
 You can use `php artisan serve` or whatever local web server you have to server the website. You will find a visual preview of the data generated.
 
+Example:
 ![Screenshot](https://github.com/chargefield/bin-packing-test/blob/master/screenshot.png?raw=true)
 
 ## Todos
