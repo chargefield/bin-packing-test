@@ -1,4 +1,4 @@
-# Bin Packing Test
+# Bin Packing Test (Laravel)
 
 A test project using Laravel for packing a set number of orders with products of different sizes.
 
