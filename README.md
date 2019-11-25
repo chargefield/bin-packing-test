@@ -56,7 +56,7 @@ DB_PASSWORD=secret
 php artisan migrate:fresh --seed
 ```
 
-This will seed the database with 50 orders of random number of products.
+This will seed the database with 50 orders with a random number of products. You can keep running this command to see different results.
 
 _Note: You can change the number of orders created or the number of products created in the `database/seeds/OrdersTableSeeder.php` file._
 
