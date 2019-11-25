@@ -45,7 +45,7 @@ class Packer
     }
 
     /**
-     * Get items for given order.
+     * Get items for a given order.
      *
      * @param \App\Order $order
      * @return \Illuminate\Support\Collection
