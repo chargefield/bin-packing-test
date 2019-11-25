@@ -4,9 +4,12 @@ namespace App\Printing;
 
 use App\Product;
 use App\OrderItem;
+use App\Printing\Traits\HasNode;
 
 class Item
 {
+    use HasNode;
+
     protected $product;
 
     protected $order_item;
@@ -14,8 +17,6 @@ class Item
     protected $width;
 
     protected $height;
-
-    protected $node;
 
     public function __construct(Product $product, OrderItem $order_item)
     {
@@ -125,28 +126,5 @@ class Item
     public function overflow(): bool
     {
         return (bool) is_null($this->node);
-    }
-
-    /**
-     * Get node
-     *
-     * @return \App\Printing\Node|null
-     */
-    public function node(): ?Node
-    {
-        return $this->node;
-    }
-
-    /**
-     * Set node
-     *
-     * @param \App\Printing\Node|null $node
-     * @return self
-     */
-    public function setNode(?Node $node): self
-    {
-        $this->node = $node;
-
-        return $this;
     }
 }

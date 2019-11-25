@@ -2,15 +2,16 @@
 
 namespace App\Printing;
 
+use App\Printing\Traits\HasNode;
 use Illuminate\Support\Collection;
 
 class Bin
 {
+    use HasNode;
+
     protected $width;
 
     protected $height;
-
-    protected $node;
 
     protected $free_space;
 
@@ -39,29 +40,6 @@ class Bin
     public function height(): int
     {
         return $this->height;
-    }
-
-    /**
-     * Get node
-     *
-     * @return \App\Printing\Node|null
-     */
-    public function node(): ?Node
-    {
-        return $this->node;
-    }
-
-    /**
-     * Set node
-     *
-     * @param \App\Printing\Node|null $node
-     * @return self
-     */
-    public function setNode(?Node $node): self
-    {
-        $this->node = $node;
-
-        return $this;
     }
 
     /**
