@@ -27,7 +27,7 @@ Fork or download this repository:
 git@github.com:chargefield/bin-packing-test.git
 ```
 
-In the terminal, cd into the directory and run composer to install the default laravel packages:
+In the terminal, `cd` into the directory and use composer to install the default Laravel packages:
 
 ```bash
 composer install
