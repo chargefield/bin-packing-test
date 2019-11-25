@@ -21,7 +21,7 @@ class Preview
     public function view(): View
     {
         return view('preview', [
-            'bins' => $this->bins->setup(),
+            'bins' => $this->bins->get(),
         ]);
     }
 }
