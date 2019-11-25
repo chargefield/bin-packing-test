@@ -33,7 +33,7 @@ In the terminal, cd into the directory and run composer to install the default l
 composer install
 ```
 
-_Note: You might have to copy `.env.example` file and name it to `.env`. Fill out any important values to get the app running._
+_Note: You might need to duplicate the `.env.example` file and name it `.env`. Fill out any important values to get the app up and running._
 
 ### Database Setup
 
