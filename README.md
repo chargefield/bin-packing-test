@@ -68,7 +68,9 @@ You can use `php artisan serve` or whatever local web server you have to server 
 
 ## Todos
 
-This isn't the perfect/only solution. There are a bunch of improvements left to do:
+This isn't the perfect/only solution.
+
+There are a bunch of improvements left to do:
 
 -   multiple sheets for overflow
 -   sheets with multiple orders if there is room
