@@ -2,7 +2,7 @@
 
 A test Laravel project for packing a random number of orders of products of different sizes.
 
-## Problem
+## The Problem
 
 Create an algorithm to take incoming orders and populate printing sheets.
 
