@@ -105,7 +105,9 @@ class Bin
     public function overflow(): Collection
     {
         if (is_null($this->overflow)) {
-            $this->overflow = $this->items->filter->overflow()->values();
+            $this->overflow = $this->items
+                ->filter->overflow()
+                ->values();
         }
 
         return $this->overflow;
