@@ -17,8 +17,14 @@
                 font-family: 'Roboto', sans-serif;
             }
 
+            .bin .item {
+                box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 1);
+                cursor: default;
+            }
+
             .bin:hover .space {
                 box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 1);
+                cursor: default;
             }
         </style>
     </head>
@@ -31,7 +37,7 @@
                 <div class="bin" style="position: relative; background-color: #fff; border: 1px solid #000; width: {{ $bin['bin']->width() }}rem; height: {{ $bin['bin']->height() }}rem; overflow: hidden;">
                     @foreach($bin['items'] as $item)
                     @if($item->node() && $item->node()->isTaken())
-                    <div title="{{ $item->product()->title }} (x:{{ $item->node()->x() }} y:{{ $item->node()->y() }} w:{{ $item->node()->width() }} h:{{ $item->node()->height() }})" style="position: absolute; line-height: 0; background-color: #{{ $item->product()->color }}; color: rgba(255,255,255,.7); font-weight: 700; box-shadow: inset 0px 0px 1px rgba(0,0,0,1); top: {{ $item->node()->y() }}rem; left: {{ $item->node()->x() }}rem; width: {{ $item->node()->width() }}rem; height: {{ $item->node()->height() }}rem; font-size: .5rem; display: flex; justify-content: center; align-items: center;">
+                    <div class="item" title="{{ $item->product()->title }} (x:{{ $item->node()->x() }} y:{{ $item->node()->y() }} w:{{ $item->node()->width() }} h:{{ $item->node()->height() }})" style="position: absolute; line-height: 0; background-color: #{{ $item->product()->color }}; color: rgba(255,255,255,.7); font-weight: 700; top: {{ $item->node()->y() }}rem; left: {{ $item->node()->x() }}rem; width: {{ $item->node()->width() }}rem; height: {{ $item->node()->height() }}rem; font-size: .5rem; display: flex; justify-content: center; align-items: center;">
                         <span style="transform: rotate({{ $item->isRotated() ? '90' : '0' }}deg);">{{ $item->product()->id }}</span>
                     </div>
                     @endif
@@ -58,7 +64,7 @@
             <h4 style="margin: .5rem 0;">Sheet {{ $loop->iteration }}: Overflow</h4>
             <div style="position: relative; width: 100%; display: flex; flex-wrap: wrap;">
                 @foreach($bin['overflow'] as $item)
-                <div title="{{ $item->product()->title }} (w:{{ $item->product()->width() }} h:{{ $item->product()->height() }})" style="background-color: #{{ $item->product()->color }}; line-height: 0; color: rgba(255,255,255,.7); font-weight: 700; flex-shrink: 0; flex-grow: 0; box-shadow: inset 0px 0px 1px rgba(0,0,0,1); width: {{ $item->product()->width() }}rem; height: {{ $item->product()->height() }}rem; font-size: .5rem; display: flex; justify-content: center; align-items: center;">{{ $item->product()->id }}</div>
+                <div title="{{ $item->product()->title }} (w:{{ $item->product()->width() }} h:{{ $item->product()->height() }})" style="cursor: default; background-color: #{{ $item->product()->color }}; line-height: 0; color: rgba(255,255,255,.7); font-weight: 700; flex-shrink: 0; flex-grow: 0; box-shadow: inset 0px 0px 1px rgba(0,0,0,1); width: {{ $item->product()->width() }}rem; height: {{ $item->product()->height() }}rem; font-size: .5rem; display: flex; justify-content: center; align-items: center;">{{ $item->product()->id }}</div>
                 @endforeach
             </div>
             @endif
