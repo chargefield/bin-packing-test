@@ -31,7 +31,7 @@ class Bin
         $this->callback = $callback;
         $this->free_space = new Collection();
 
-        $this->pack($this->callback);
+        $this->pack();
     }
 
     /**
@@ -74,7 +74,7 @@ class Bin
     {
         $this->items->push($item);
 
-        $this->pack($this->callback);
+        $this->pack();
 
         return $this;
     }
@@ -149,10 +149,9 @@ class Bin
     /**
      * Pack this bin.
      *
-     * @param callable|null $callback
      * @return \Illuminate\Support\Collection
      */
-    public function pack(?callable $callback = null): Collection
+    public function pack(): Collection
     {
         $this->products = null;
         $this->overflow = null;
@@ -164,15 +163,15 @@ class Bin
         $items = $this->items
             ->sortByDesc->height()
             ->values()
-            ->map(function (Item $item) use ($callback) {
+            ->map(function (Item $item) {
                 $node = $this->getNode($this->node(), $item);
 
                 if (! is_null($node)) {
                     $item->setNode($this->createLeafNodes($node, $item->width(), $item->height()));
                 }
 
-                if (! is_null($callback)) {
-                    $callback($this, $this->items, $item);
+                if (! is_null($this->callback)) {
+                    $this->callback($this, $this->items, $item);
                 }
 
                 return $item;
