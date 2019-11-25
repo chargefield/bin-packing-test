@@ -16,6 +16,10 @@
                 background-color: #ECEFF1;
                 font-family: 'Roboto', sans-serif;
             }
+
+            .bin:hover .space {
+                box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 1);
+            }
         </style>
     </head>
 
@@ -24,7 +28,7 @@
             @foreach($bins as $bin)
             <h2 style="margin-top: 2rem;">Order Sheet {{ $loop->iteration }} <span style="font-size: .8rem;">({{ ($bin['bin'])->width() }}x{{ ($bin['bin'])->height() }})</span></h2>
             <div style="display: flex; width: 100%">
-                <div style="position: relative; background-color: #fff; border: 1px solid #000; width: {{ $bin['bin']->width() }}rem; height: {{ $bin['bin']->height() }}rem; overflow: hidden;">
+                <div class="bin" style="position: relative; background-color: #fff; border: 1px solid #000; width: {{ $bin['bin']->width() }}rem; height: {{ $bin['bin']->height() }}rem; overflow: hidden;">
                     @foreach($bin['items'] as $item)
                     @if($item->node() && $item->node()->isTaken())
                     <div title="{{ $item->product()->title }} (x:{{ $item->node()->x() }} y:{{ $item->node()->y() }} w:{{ $item->node()->width() }} h:{{ $item->node()->height() }})" style="position: absolute; line-height: 0; background-color: #{{ $item->product()->color }}; color: rgba(255,255,255,.7); font-weight: 700; box-shadow: inset 0px 0px 1px rgba(0,0,0,1); top: {{ $item->node()->y() }}rem; left: {{ $item->node()->x() }}rem; width: {{ $item->node()->width() }}rem; height: {{ $item->node()->height() }}rem; font-size: .5rem; display: flex; justify-content: center; align-items: center;">
@@ -34,7 +38,7 @@
                     @endforeach
 
                     @foreach(($bin['bin'])->getFreeSpace() as $node)
-                    <div title="Free Space (x:{{ $node[0] }} y:{{ $node[1] }} w:{{ $node[2] }} h:{{ $node[3] }})" style="position: absolute; line-height: 0; background-color: #ccc; top: {{ $node[1] }}rem; left: {{ $node[0] }}rem; width: {{ $node[2] }}rem; height: {{ $node[3] }}rem;"></div>
+                    <div class="space" title="Free Space (x:{{ $node[0] }} y:{{ $node[1] }} w:{{ $node[2] }} h:{{ $node[3] }})" style="position: absolute; line-height: 0; background-color: #ccc; top: {{ $node[1] }}rem; left: {{ $node[0] }}rem; width: {{ $node[2] }}rem; height: {{ $node[3] }}rem;"></div>
                     @endforeach
                 </div>
                 <div style="margin: 0 1rem;">
