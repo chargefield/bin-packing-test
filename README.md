@@ -62,7 +62,7 @@ _Note: You can change the number of orders created in the `database/seeds/Orders
 
 ### Preview
 
-You can use `php artisan serve` or whatever local web server you have to server the website. You will find a visual preview of the data generated.
+You can use `php artisan serve` or whatever local web server you have to serve local websites. You will find a visual preview of the data generated.
 
 **Example:**
 
