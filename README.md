@@ -1,6 +1,6 @@
 # Bin Packing Test
 
-A test Laravel project for packing a random number of orders of products of different sizes.
+A test Laravel project for packing a random number of orders with products of different sizes.
 
 ## The Problem
 
