@@ -15,6 +15,8 @@ class Bin
 
     protected $items;
 
+    protected $callback;
+
     protected $products;
 
     protected $overflow;
@@ -26,9 +28,10 @@ class Bin
         $this->width = $width;
         $this->height = $height;
         $this->items = $items;
+        $this->callback = $callback;
         $this->free_space = new Collection();
 
-        $this->pack();
+        $this->pack($this->callback);
     }
 
     /**
@@ -59,6 +62,21 @@ class Bin
     public function items(): Collection
     {
         return $this->items;
+    }
+
+    /**
+     * Add an item to this bin.
+     *
+     * @param \App\Printing\Item $item
+     * @return self
+     */
+    public function addItem(Item $item): self
+    {
+        $this->items->push($item);
+
+        $this->pack($this->callback);
+
+        return $this;
     }
 
     /**
