@@ -39,7 +39,7 @@ _Note: You might need to duplicate the `.env.example` file and name it `.env`. F
 
 Create a database and update the `.env` file with the correct values.
 
-**Example**
+**Example:**
 
 ```
 DB_CONNECTION=mysql
