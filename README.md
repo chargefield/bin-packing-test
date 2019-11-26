@@ -33,7 +33,7 @@ In the terminal, `cd` into the folder and use [composer](https://getcomposer.org
 composer install
 ```
 
-_Note: You might need to duplicate the `.env.example` file and name it `.env`. Fill out any important values to get the app up and running._
+_Note: You might need to duplicate the `.env.example` file and name it `.env`. Fill out any important values to get the application up and running._
 
 ### Database Setup
 
