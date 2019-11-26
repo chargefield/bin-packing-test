@@ -1,6 +1,6 @@
 # Bin Packing Test (Laravel)
 
-A test project using Laravel for packing a set number of orders with products of different sizes.
+A test project in [Laravel](https://laravel.com) for packing a set number of orders with products of different sizes.
 
 ## The Problem
 
@@ -12,7 +12,7 @@ Create an algorithm to take incoming orders and populate printing sheets.
 
 ### Constraints
 
--   Must use Laravel and Eloquent to develop algorithm
+-   Must use [Laravel](https://laravel.com) and [Eloquent](https://laravel.com/docs/6.x/eloquent) to develop algorithm
 -   Orders must have all of their items on the same print sheet
 -   Orders can have any number of items with any number of quantity
 -   Must be able to track placement of products on the sheets
@@ -27,7 +27,7 @@ Fork or download this repository:
 git@github.com:chargefield/bin-packing-test.git
 ```
 
-In the terminal, `cd` into the directory and use composer to install the default Laravel packages:
+In the terminal, `cd` into the folder and use [composer](https://getcomposer.org) to install the default [Laravel](https://laravel.com) packages:
 
 ```bash
 composer install
@@ -62,7 +62,7 @@ _Note: You can change the number of orders created in the `database/seeds/Orders
 
 ### Preview
 
-You can use `php artisan serve` or whatever local web server you have to serve local websites. You will find a visual preview of the data generated.
+You can use `php artisan serve` or whatever local web server you use to serve local websites. You will find a visual preview of the data generated at the `/` route.
 
 **Example:**
 
@@ -70,11 +70,11 @@ You can use `php artisan serve` or whatever local web server you have to serve l
 
 ### Files
 
-All files used to perform the packing can be found in `app/Printing/` folder.
+All class files used to perform the packing can be found in the `app/Printing/` folder.
 
 ## Todos
 
-This isn't the perfect/only solution.
+This isn't the perfect solution. It's my attempt at solving this problem at this time.
 
 There are a bunch of improvements left to do:
 
